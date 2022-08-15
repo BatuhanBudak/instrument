@@ -1,26 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --clr-black: #000;
+  --clr-white: #fff;
+  --clr-blue: #6c83ff;
+  --clr-beige: #ffa98e;
+
+
+  /* font-families */
+  --ff-primary: "Bellefair", serif;
+  --ff-secondary: "Barlow Condensed", sans-serif;
+  --ff-third: "Barlow", sans-serif;
+
+  /* font-sizes */
+  --fs-h1: 1.875rem;
+  --fs-h2: 1.25rem;
+  --fs-body: .875rem;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --fs-h1: 2.875rem;
+    --fs-h2: 2.25rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --fs-h1: 3.875rem;
+    --fs-h2: 3.25rem;
+  }
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+li,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 
 a {
   color: inherit;
   text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
   }
+}
+
+/* Typography */
+
+h1 {
+  line-height: 1.15px;
+  letter-spacing: -1.16px;
+  font-size: var(--fs-h1);
+  font-family: var(--ff-primary);
+}
+
+h2 {
+  line-height: 1.5px;
+  letter-spacing: 0.1px;
+  font-size: var(--fs-h2);
+  font-family: var(--ff-secondary);
+}
+
+p,
+li {
+  line-height: 23px;
+  letter-spacing: 0.8px;
+  font-size: var(--fs-body);
+  font-family: var(--ff-third);
+}
+
+body {
+  font-family: var(--ff-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  grid-auto-flow: row;
+  overflow-x: hidden;
+  background-color: var(--clr-black);
 }
