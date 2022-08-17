@@ -1,0 +1,148 @@
+main {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: auto;
+    margin-top: 80px;
+    row-gap: 5rem;
+
+}
+
+.main-video-container {
+    margin-block: 5rem;
+    grid-column: 1/span 25;
+    width: 100%;
+}
+
+.video-container {
+    padding-top: 56.25%;
+    position: relative;
+}
+
+iframe {
+    display: block;
+    position: absolute;
+    width: 100%;
+    border: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.main-title {
+    font-size: var(--fs-h1);
+    color: var(--clr-white);
+    grid-column: 3/24;
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+.centered-container {
+    grid-column: 3/24;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.centered-row-container {
+    grid-column: 3/24;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sub-title {
+    color: var(--clr-white);
+    font-weight: bold;
+}
+
+.small-gap {
+    gap: 1rem;
+}
+
+.section-seperator {
+    margin-block: 1rem 3rem;
+}
+
+.centered-container .main-title {
+    margin: 0;
+}
+
+.full-width-container {
+    grid-column: 1/26;
+}
+
+.image-caption {
+    align-self: flex-start;
+}
+
+.flex-start {
+    align-self: flex-start;
+}
+
+.minus-top-margin {
+    margin-top: -4rem;
+}
+
+
+.fade-enter img {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  .fade-enter-active img {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  .fade-exit img {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .fade-exit-active  img{
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  .fade-enter-active img,
+  .fade-exit-active img {
+    transition: opacity 500ms, transform 500ms;
+  }
+
+
+.my-node-second-enter {
+    opacity: 0;
+  }
+  .my-node-second-enter-active {
+    opacity: 1;
+    transform: translateY(+10px);
+
+    transition: all 750ms;
+  }
+  .my-node-second-exit {
+    opacity: 1;
+  }
+  .my-node-second-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 750ms;
+  }
+
+
+.my-node-third-enter {
+    opacity: 0;
+  }
+  .my-node-third-enter-active {
+    opacity: 1;
+    transform: translateY(+10px);
+
+    transition: all 750ms;
+  }
+  .my-node-third-exit {
+    opacity: 1;
+    
+  }
+  .my-node-third-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 750ms;
+  }
