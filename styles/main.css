@@ -36,7 +36,9 @@ iframe {
     margin-bottom: 1em;
 }
 
-.centered-container {
+
+.centered-container,
+.centered-container-second {
     grid-column: 3/24;
     display: flex;
     flex-direction: column;
@@ -85,11 +87,9 @@ iframe {
     margin-top: -4rem;
 }
 
-
-
 .fade-enter img {
     opacity: 0;
-    transform: translateY(-20%);
+    transform: translateY(-10%);
   }
   .fade-enter-active img {
     opacity: 1;
@@ -101,11 +101,238 @@ iframe {
   }
   .fade-exit-active  img{
     opacity: 0;
-    transform: translateY(-20%);
+    transform: translateY(-10%);
   }
   .fade-enter-active img,
   .fade-exit-active img {
-    transition: opacity 1000ms, transform 1000ms;
+    transition: opacity 300ms, transform 300ms;
   }
   
 
+  @media screen and (min-width: 500px) {
+
+    .main-video-container{
+        margin-block: 8rem;
+    }
+    .main-title {
+    text-align: center;}
+
+    .centered-container{
+        grid-column: 3/24;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(25, 1fr);
+        align-items: center;
+        justify-content: center;
+        gap: unset;
+        grid-row-gap: 2.5rem;
+        margin-bottom: 7.5rem;
+    }
+    .centered-container span {
+        grid-column: 1/26;
+    }
+    .centered-container .sub-title
+    {
+        grid-column: 3/24;
+    }
+    .centered-container .btn {
+        grid-column: 3/ 13;
+    }
+    .section-seperator {
+        margin-block: 10rem ;
+    }
+    .centered-row-container {
+        margin-block: 10rem 0 ;
+    }
+    .centered-container .btn.our-work-btn {
+        grid-column: 10/15;
+    }
+   
+}
+@media screen and (min-width: 800px) {
+
+    .main-video-container {
+        grid-column: 2/25;
+        margin-block: 13rem 10rem;
+    }
+    .main-title {
+        max-width: 550px;
+    }
+    .centered-container span {
+        grid-column: 3/24;
+    }
+    .centered-container .sub-title
+    {
+        grid-column: 5/22;
+    }
+    .centered-container .btn {
+        grid-column: 5/ 15;
+    }
+
+    .full-width-container {
+        grid-column: 3/24;
+    }
+
+    .centered-container-second {
+        flex-direction: row;
+    }
+    .centered-container-second .sub-title, 
+    .centered-container-second .image-caption{
+        flex: 50%;
+        margin-bottom: 2rem;
+    }
+    .centered-row-container {
+        margin-block: 5rem 0 ;
+        grid-column: 6/21;
+    }
+    .animated-logo-container{
+        max-height: 150px;
+    }
+
+   }
+   @media screen and (min-width: 1000px) {
+    .main-title {
+        max-width: 700px;
+        align-self: center;
+        justify-self: center;
+    }
+    .centered-container .sub-title {
+        grid-column: 3/22;
+    }
+    .centered-container .btn {
+        grid-column: 3/ 13;
+    }
+   }
+   @media screen and (min-width: 1001px) {
+    .main-video-container {
+        margin-block: 15rem 10rem;
+    }
+    .main-title {
+        max-width: 800px;
+    }
+    .centered-container {
+        row-gap: 0;
+        grid-template-rows: repeat(3, 1fr) ;
+        justify-content: unset;
+        align-items: unset;
+        gap: unset;
+    }
+    div.centered-container:nth-of-type(2) span {
+        grid-column: 1/14;
+        grid-row: 1/4;
+    }
+    div.centered-container:nth-of-type(2) .sub-title,
+    div.centered-container:nth-of-type(2) .btn {
+        grid-column: 16/25;
+        align-self: center;
+    }
+    div.centered-container:nth-of-type(2) .sub-title
+    {
+        grid-row: 2/3;
+    }
+    div.centered-container:nth-of-type(2) .btn
+    {
+        grid-row: 3/4;
+    }
+
+    div.centered-container:nth-of-type(3) {
+        grid-template-rows: repeat(3, auto) ;
+        row-gap: 2rem;
+    }
+    div.centered-container:nth-of-type(3) span {
+        grid-column: 13/26;
+        grid-row: 1/4;
+    }
+    div.centered-container:nth-of-type(3) .sub-title,
+    div.centered-container:nth-of-type(3) .btn {
+        grid-column: 3/12;
+        align-self: center;
+    }
+    div.centered-container:nth-of-type(3) .sub-title{
+        grid-row: 2/3;
+    }
+    div.centered-container:nth-of-type(3) .btn {
+        grid-row: 3/4;
+    }
+    div.centered-container:nth-of-type(4) {
+        grid-template-rows: repeat(3, .5fr) ;
+    }
+
+    div.centered-container:nth-of-type(4) span {
+        grid-column: 1/14;
+        grid-row: 1/4;
+    }
+    div.centered-container:nth-of-type(4) .sub-title,
+    div.centered-container:nth-of-type(4) .btn {
+        grid-column: 16/25;
+        align-self: center;
+    }
+    div.centered-container:nth-of-type(4) .sub-title
+    {
+        grid-row: 2/3;
+    }
+    div.centered-container:nth-of-type(4) .btn
+    {
+        grid-row: 3/4;
+    }
+
+    div.centered-container:nth-of-type(5) 
+    {
+        grid-column: 3/24;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(25, 1fr);
+        align-items: center;
+        justify-content: center;
+        grid-row-gap: 1.5rem;
+        margin-bottom: 7.5rem;
+        align-self: center;
+        justify-self: center;
+    }
+    div.full-width-container:nth-of-type(6) {
+        grid-column: 2/13;
+    }
+    .centered-container-second:nth-of-type(7) {
+        flex-direction: column;
+        grid-column: 2/13;
+    }
+    div.full-width-container:nth-of-type(8) {
+        grid-column: 14/25;
+        grid-row: 7/8;
+    }
+    div.centered-container-second:nth-of-type(9) {
+        flex-direction: column;
+        grid-column: 14/25;
+    }
+    .centered-container-second .sub-title, 
+    .centered-container-second .image-caption{
+        flex: unset;
+        margin-bottom: unset;
+    }
+    div.centered-container:nth-of-type(10) {
+        gap: 1.5rem;
+        grid-template-rows: auto;
+        align-self: center;
+        justify-self: center;
+    }
+   }
+
+   @media screen and (min-width: 1500px) {
+
+    .main-video-container {
+        margin-block: 18rem 10rem;
+    }
+    .main-title {
+        max-width: 1100px;
+    }
+
+    div.centered-container-second:nth-of-type(7),
+    div.centered-container-second:nth-of-type(9) {
+        flex-direction: row;
+        
+    }
+    div.centered-container-second:nth-of-type(7) > *,
+    div.centered-container-second:nth-of-type(9) > * {
+        flex: 50%;
+    }
+}

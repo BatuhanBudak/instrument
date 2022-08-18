@@ -56,6 +56,9 @@
 .nav__item {
     color: var(--clr-white);
 }
+.nav-link {
+    font-size: 14px;
+}
 
 .nav-open.header.scrollDown,
 .nav-open.header.scrollUp {
@@ -124,20 +127,20 @@
         height: 120px;
         padding: 2em 2.5em;
     }
-
-
-
     .navigation {
         position: unset;
         transform: unset;
         transition: unset;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-        gap: 4em;
+        gap: 2em;
         visibility: unset;
         padding: unset;
         margin: unset;
+    }
+    .nav__item  {
+        letter-spacing: 1px;
     }
 
     .logo-container {

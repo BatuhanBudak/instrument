@@ -62,7 +62,7 @@ export default function IconFade() {
     }, []);
 
     return (
-        <div className="centered-row-container">
+        <section className="centered-row-container">
              <SwitchTransition mode="out-in">
           <CSSTransition
           key={firstAnimatedGroupLogo.src}
@@ -101,7 +101,7 @@ export default function IconFade() {
             </div>
           </CSSTransition>
           </SwitchTransition>
-          </div>
+          </section>
     )
   
 }
