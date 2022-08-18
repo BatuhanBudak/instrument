@@ -157,7 +157,6 @@ body {
   font-family: var(--ff-primary);
   line-height: 1.5;
   min-height: 100vh;
-  display: grid;
   overflow-x: hidden;
   background-color: var(--clr-black);
 }

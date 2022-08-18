@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useRef, useMemo,createRef } from "react";
 import { firstgroup, secondgroup, thirdgroup } from '../imageData';
 import { CSSTransition,  SwitchTransition } from "react-transition-group";
 
@@ -8,6 +8,7 @@ export default function IconFade() {
     const [firstAnimatedGroupLogo, setFirstAnimatedGroupLogo] = useState(firstgroup[0]);
     const [secondAnimatedGroupLogo, setSecondAnimatedGroupLogo] = useState(secondgroup[0]);
     const [thirdAnimatedGroupLogo, setThirdAnimatedGroupLogo] = useState(thirdgroup[0]);
+    const nodeRef = useRef(null)
 
     useEffect(() => {
         let indexFirst = 0;
@@ -65,6 +66,7 @@ export default function IconFade() {
              <SwitchTransition mode="out-in">
           <CSSTransition
           key={firstAnimatedGroupLogo.src}
+         
               addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
               classNames='fade'
           >
@@ -82,7 +84,7 @@ export default function IconFade() {
               classNames='fade'
           >
             <div className="animated-logo-container">
-            <Image src={secondAnimatedGroupLogo} alt='company logo' />
+            <Image  src={secondAnimatedGroupLogo} alt='company logo' />
                 
             </div>
           </CSSTransition>
@@ -101,4 +103,5 @@ export default function IconFade() {
           </SwitchTransition>
           </div>
     )
+  
 }

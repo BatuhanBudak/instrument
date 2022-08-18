@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import '../styles/Header.css';
 import '../styles/main.css';
+import '../styles/footer.css';
 
 import type { AppProps } from 'next/app'
 

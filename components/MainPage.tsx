@@ -48,11 +48,11 @@ export default function MainPage() {
                 <h2 className='sub-title flex-start'>Dropbox &quot;For All Things Worth Saving&quot; </h2>
                 <p className='image-caption'>To evolve and mature how Dropbox engages with their customers, we developed a multi-year brand platform as well as launched its first campaign titled &apos;For All Things Worth Saving&apos; — an ecosystem of branded experiences aimed to remind people of the inherent value of their digital files.</p>
             </div >
+            <IconFade />
             <div className='centered-container small-gap section-seperator '>
                 <h1 className='main-title'>We&apos;d love to be your partner</h1>
                 <button className='btn'><a href="">Get in touch</a></button>
             </div>
-            <IconFade />
         </main>
     )
 }
