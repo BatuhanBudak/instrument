@@ -23,8 +23,6 @@ export default function useScrollPos() {
 
         function handleScroll() {
             let currentScroll = window.scrollY;
-            // console.log({ scrollDown, scrollUp });
-
             if (currentScroll <= headerHeight) {
                 setScrollMove("up");
                 checkScrollClass();

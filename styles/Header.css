@@ -34,7 +34,6 @@
 
 .navigation {
     position: fixed;
-    /* fixed yapmak yerine height: 100vh yap? */
     background: var(--clr-black);
     color: var(--clr-white);
     margin-top: 80px;
